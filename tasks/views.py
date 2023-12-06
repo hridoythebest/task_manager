@@ -40,7 +40,7 @@ class TaskListView(ListView):
 
 class HomeView(View):
     def get(self, request):
-        return render(request, 'tasks/home.html')  
+        return render(request, 'tasks/home.html') 
 
 class SignUpView(View):
     def get(self, request):

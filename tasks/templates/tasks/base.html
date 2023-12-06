@@ -13,11 +13,12 @@
           <li><a href="{% url 'home' %}">Home</a></li>
           <li><a href="{% url 'task-list' %}">Task List</a></li>
           {% if user.is_authenticated %}
-            <li><a href="{% url 'add-task' %}">Add Task</a></li>
+            {% comment %} <li><a href="{% url 'add-task' %}">Add Task</a></li> {% endcomment %}
             <li><a href="{% url 'logout' %}">Logout</a></li>
           {% else %}
             <li><a href="{% url 'signup' %}">Sign Up</a></li>
             <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'password_reset' %}">Forgot Password</a></li>
           {% endif %}
           <li><a href="{% url 'help' %}">Help</a></li>
           <li><a href="{% url 'about' %}">About</a></li>
