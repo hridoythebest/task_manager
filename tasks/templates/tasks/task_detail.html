@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>{{ object.title }}</h2>
+  <p>{{ object.description }}</p>
+  <p><strong>Due Date:</strong> {{ object.due_date }}</p>
+  <p><strong>Priority:</strong> {{ object.priority }}</p>
+  <p><strong>Completed:</strong> {% if object.completed %}Yes{% else %}No{% endif %}</p>
+  <p><strong>Created At:</strong> {{ object.created_at }}</p>
+  <p><strong>Updated At:</strong> {{ object.updated_at }}</p>
+  <a href="{% url 'task-update' pk=object.pk %}">Update this task</a>
+  <a href="{% url 'task-delete' pk=object.pk %}">Delete this task</a>
+{% endblock %}
